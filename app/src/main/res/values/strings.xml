@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MovilDevAppTurismo</string>
+    <string name="monserrate" />
+    <string name="monserrate1">MONSERRATE</string>
+    <string name="descripcion">Descripción:</string>
+    <string name="botonregresarinicio">Regresar a menú principal</string>
 </resources>
