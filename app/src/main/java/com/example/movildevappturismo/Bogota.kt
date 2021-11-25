@@ -4,5 +4,5 @@ data class Bogota(
     val nombre: String,
     val descripCorta: String,
     val puntuacion: String,
-    val foto: Int
+    val urlpic: String
     )

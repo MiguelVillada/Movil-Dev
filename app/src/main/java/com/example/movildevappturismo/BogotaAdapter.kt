@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class BogotaAdapter(
     private val bogotaList: ArrayList<Bogota>
@@ -36,7 +37,7 @@ class BogotaAdapter(
             nameTextView.text = bogota.nombre
             descripcortaTextView.text = bogota.descripCorta
             puntuacionTextView.text = bogota.puntuacion
-
+            Picasso.get().load(bogota.urlpic).into(picImageView);
         }
     }
 }
