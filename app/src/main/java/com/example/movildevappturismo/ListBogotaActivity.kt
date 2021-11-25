@@ -19,8 +19,8 @@ class ListBogotaActivity : AppCompatActivity() {
 
         bogotaRecyclerView = findViewById(R.id.bogota_recycler_view)
 
-        listBogota = createMockBogota()
-
+       // listBogota = createMockBogota()
+        listBogota = loadMockBogotaFromJson()
         bogotaAdapter = BogotaAdapter(listBogota)
 
        // bogotaRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
@@ -30,6 +30,11 @@ class ListBogotaActivity : AppCompatActivity() {
             adapter = bogotaAdapter
             setHasFixedSize(false)
         }
+    }
+
+    private fun loadMockBogotaFromJson(): ArrayList<Bogota> {
+        var bogotaString: String = applicationContext.assets.open("poibogota.json").bufferedReader().use { it.readText() }
+
     }
 
     private fun createMockBogota(): ArrayList<Bogota> {
