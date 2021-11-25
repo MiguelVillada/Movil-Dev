@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class BogotaAdapter(
-    private val bogotaList: ArrayList<Bogota>
+    private val bogotaList: ArrayList<BogotaItem>
     ) : RecyclerView.Adapter<BogotaAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +33,7 @@ class BogotaAdapter(
         private var puntuacionTextView: TextView = itemView.findViewById(R.id.puntuacion_text_view)
         private var picImageView: ImageView = itemView.findViewById(R.id.pic_image_view)
 
-        fun bind(bogota: Bogota){
+        fun bind(bogota: BogotaItem){
             nameTextView.text = bogota.nombre
             descripcortaTextView.text = bogota.descripCorta
             puntuacionTextView.text = bogota.puntuacion

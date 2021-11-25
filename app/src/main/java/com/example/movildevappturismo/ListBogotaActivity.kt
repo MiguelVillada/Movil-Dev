@@ -5,10 +5,11 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 
 class ListBogotaActivity : AppCompatActivity() {
 
-    private lateinit var listBogota: ArrayList<Bogota>
+    private lateinit var listBogota: ArrayList<BogotaItem>
     private lateinit var bogotaAdapter: BogotaAdapter
     private lateinit var bogotaRecyclerView: RecyclerView
 
@@ -32,12 +33,14 @@ class ListBogotaActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadMockBogotaFromJson(): ArrayList<Bogota> {
+    private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {
         var bogotaString: String = applicationContext.assets.open("poibogota.json").bufferedReader().use { it.readText() }
-
+        val gson = Gson()
+        val data = gson.fromJson(bogotaString, Bogota::class.java)
+        return data
     }
 
-    private fun createMockBogota(): ArrayList<Bogota> {
+    /* private fun createMockBogota(): ArrayList<Bogota> {
         return arrayListOf(
             Bogota(
                 nombre = "Monserrate",
@@ -65,6 +68,6 @@ class ListBogotaActivity : AppCompatActivity() {
             )
 
         )
-    }
+    }*/
 
     }
