@@ -1,4 +1,4 @@
-package com.example.movildevappturismo
+package com.example.movildevappturismo.model
 
 
 import com.google.gson.annotations.SerializedName

@@ -1,10 +1,12 @@
-package com.example.movildevappturismo
+package com.example.movildevappturismo.list
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.movildevappturismo.R
+import com.example.movildevappturismo.model.Bogota
+import com.example.movildevappturismo.model.BogotaItem
 import com.google.gson.Gson
 
 class ListBogotaActivity : AppCompatActivity() {
