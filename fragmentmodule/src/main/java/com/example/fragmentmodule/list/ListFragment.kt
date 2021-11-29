@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fragmentmodule.databinding.FragmentListBinding
 import com.example.fragmentmodule.model.Bogota
@@ -39,7 +40,7 @@ class ListFragment : Fragment() {
     }
 
     private fun onBogotaClicked(bogota: BogotaItem) {
-
+        //findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(poibogota = bogota))
     }
 
     private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {

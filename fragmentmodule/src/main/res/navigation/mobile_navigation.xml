@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.example.fragmentmodule.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="poibogota"
+            app:argType="com.example.fragmentmodule.model.BogotaItem" />
+    </fragment>
 </navigation>
