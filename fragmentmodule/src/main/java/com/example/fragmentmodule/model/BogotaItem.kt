@@ -1,4 +1,4 @@
-package com.example.movildevappturismo.model
+package com.example.fragmentmodule.model
 
 
 import com.google.gson.annotations.SerializedName

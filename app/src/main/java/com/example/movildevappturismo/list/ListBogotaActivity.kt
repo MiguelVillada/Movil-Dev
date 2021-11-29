@@ -1,10 +1,13 @@
 package com.example.movildevappturismo.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movildevappturismo.R
+import com.example.movildevappturismo.detalle.DetalleActivity
 import com.example.movildevappturismo.model.Bogota
 import com.example.movildevappturismo.model.BogotaItem
 import com.google.gson.Gson
@@ -24,7 +27,7 @@ class ListBogotaActivity : AppCompatActivity() {
 
        // listBogota = createMockBogota()
         listBogota = loadMockBogotaFromJson()
-        bogotaAdapter = BogotaAdapter(listBogota)
+        bogotaAdapter = BogotaAdapter(listBogota, onItemClicked = { onBogotaClicked(it) } )
 
        // bogotaRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
@@ -33,6 +36,13 @@ class ListBogotaActivity : AppCompatActivity() {
             adapter = bogotaAdapter
             setHasFixedSize(false)
         }
+    }
+
+    private fun onBogotaClicked(bogota: BogotaItem) {
+        Log.d("nombre", bogota.nombre)
+        val intent = Intent(this, DetalleActivity::class.java)
+        intent.putExtra("bogota",bogota)
+        startActivity(intent)
     }
 
     private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {
@@ -52,7 +62,7 @@ class ListBogotaActivity : AppCompatActivity() {
             ),
             Bogota(
                 nombre = "Chorro de Quevedo",
-                descripCorta = "Aquí comenzó todo: en la plazoleta del Chorro de Quevedo se cree que se fundó Bogotá el 6 de agosto de 1538.",
+                descripCorta = "Aquí comenzó too: en la plazoleta del Chorro de Quevedo se cree que se fundó Bogotá el 6 de agosto de 1538.",
                 puntuacion = "Puntuación: 4",
                 urlpic = "https://www.sitiosturisticosbogota.com/wp-content/uploads/2018/11/chorro-de-quevedo.jpg"
             ),
