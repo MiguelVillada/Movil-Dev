@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fragmentmodule.databinding.FragmentListBinding
 import com.example.fragmentmodule.model.Bogota
 import com.example.fragmentmodule.model.BogotaItem
@@ -30,6 +31,11 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         listBogota = loadMockBogotaFromJson()
         bogotaAdapter = BogotaAdapter(listBogota, onItemClicked = { onBogotaClicked(it) } )
+        listBinding.bogotaRecyclerView.apply{
+            layoutManager = LinearLayoutManager(context)
+            adapter = bogotaAdapter
+            setHasFixedSize(false)
+        }
     }
 
     private fun onBogotaClicked(bogota: BogotaItem) {
