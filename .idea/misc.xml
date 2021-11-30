@@ -11,6 +11,7 @@
         <entry key="fragmentmodule/src/main/res/layout/card_view_bogota_item.xml" value="0.1953125" />
         <entry key="fragmentmodule/src/main/res/layout/fragment_detail.xml" value="0.18125" />
         <entry key="fragmentmodule/src/main/res/layout/fragment_list.xml" value="0.1953125" />
+        <entry key="fragmentmodule/src/main/res/xml/root_preferences.xml" value="0.33" />
       </map>
     </option>
   </component>

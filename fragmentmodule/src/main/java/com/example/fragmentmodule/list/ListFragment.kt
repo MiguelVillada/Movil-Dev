@@ -41,6 +41,7 @@ class ListFragment : Fragment() {
 
     private fun onBogotaClicked(bogota: BogotaItem) {
         //findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(poibogota = bogota))
+        findNavController().navigate(ListFragmentDirections.actionListFragmentToSettingsFragment())
     }
 
     private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {
