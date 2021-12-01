@@ -19,5 +19,11 @@
     "descripCorta" : "El Parque Metropolitano Simón Bolívar es el parque urbano más grande e importante de la ciudad de Bogotá.",
     "puntuacion" : "Puntuación: 3.8",
     "urlpic" : "https://bogota.gov.co/sites/default/files/styles/1050px/public/field/image/simon-bolivar.jpg"
+  },
+  {
+    "nombre" : "Barrio La Candelaria",
+    "descripCorta" : "El barrio La Candelaria es el hito mas importantes del centro historico de Bogota , se ubica en el lugar fundacional en el centro oriente de la ciudad.",
+    "puntuacion" : "Puntuación: 5",
+    "urlpic" : "https://www.viviendocali.com/wp-content/uploads/2017/11/La-Candelaria-en-Bogot%C3%A1.jpg"
   }
 ]
