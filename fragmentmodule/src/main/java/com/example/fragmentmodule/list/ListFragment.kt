@@ -40,14 +40,13 @@ class ListFragment : Fragment() {
     }
 
     private fun onBogotaClicked(bogota: BogotaItem) {
-        //findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(poibogota = bogota))
-        findNavController().navigate(ListFragmentDirections.actionListFragmentToSettingsFragment())
+        findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(poibogota = bogota))
     }
 
     private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {
         var bogotaString: String = context?.assets?.open("poibogota.json")?.bufferedReader().use { it!!.readText() } //TODO reparar
         val gson = Gson()
-        val data = gson.fromJson(bogotaString, Bogota::class.java)
-        return data
+        val bogotaList = gson.fromJson(bogotaString, Bogota::class.java)
+        return bogotaList
     }
 }
