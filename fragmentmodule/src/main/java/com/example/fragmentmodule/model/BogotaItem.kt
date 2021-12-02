@@ -1,4 +1,4 @@
-package com.example.movildevappturismo.model
+package com.example.fragmentmodule.model
 
 
 import com.google.gson.annotations.SerializedName
@@ -12,5 +12,9 @@ data class BogotaItem(
     @SerializedName("puntuacion")
     val puntuacion: String,
     @SerializedName("urlpic")
-    val urlpic: String
+    val urlpic: String,
+    @SerializedName("contenido")
+    val contenido: String,
+    @SerializedName("temperatura")
+    val temperatura: String
 ) : Serializable

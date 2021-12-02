@@ -1,0 +1,52 @@
+package com.example.fragmentmodule.list
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.fragmentmodule.databinding.FragmentListBinding
+import com.example.fragmentmodule.model.Bogota
+import com.example.fragmentmodule.model.BogotaItem
+import com.google.gson.Gson
+
+
+class ListFragment : Fragment() {
+
+    private lateinit var listBinding: FragmentListBinding
+    private lateinit var bogotaAdapter: BogotaAdapter
+    private lateinit var listBogota: ArrayList<BogotaItem>
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        listBinding = FragmentListBinding.inflate(inflater, container, false)
+
+        return listBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        listBogota = loadMockBogotaFromJson()
+        bogotaAdapter = BogotaAdapter(listBogota, onItemClicked = { onBogotaClicked(it) } )
+        listBinding.bogotaRecyclerView.apply{
+            layoutManager = LinearLayoutManager(context)
+            adapter = bogotaAdapter
+            setHasFixedSize(false)
+        }
+    }
+
+    private fun onBogotaClicked(bogota: BogotaItem) {
+        findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(poibogota = bogota))
+    }
+
+    private fun loadMockBogotaFromJson(): ArrayList<BogotaItem> {
+        var bogotaString: String = context?.assets?.open("poibogota.json")?.bufferedReader().use { it!!.readText() } //TODO reparar
+        val gson = Gson()
+        val bogotaList = gson.fromJson(bogotaString, Bogota::class.java)
+        return bogotaList
+    }
+}
