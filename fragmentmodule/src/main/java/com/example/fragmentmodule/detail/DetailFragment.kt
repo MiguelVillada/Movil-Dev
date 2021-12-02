@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.fragmentmodule.R
 import com.example.fragmentmodule.databinding.FragmentDetailBinding
+import com.squareup.picasso.Picasso
 
 
 class DetailFragment : Fragment() {
@@ -27,6 +28,13 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val bogota = args.poibogota
+
+        with(detailBinding){
+            nombreTextView.text = bogota.nombre
+            Picasso.get().load(bogota.urlpic).into(imagenImageView)
+            contenidoTextView.text = bogota.contenido
+            tempTextView.text = bogota.temperatura
+        }
     }
 
 }

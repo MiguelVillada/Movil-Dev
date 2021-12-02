@@ -12,5 +12,9 @@ data class BogotaItem(
     @SerializedName("puntuacion")
     val puntuacion: String,
     @SerializedName("urlpic")
-    val urlpic: String
+    val urlpic: String,
+    @SerializedName("contenido")
+    val contenido: String,
+    @SerializedName("temperatura")
+    val temperatura: String
 ) : Serializable
