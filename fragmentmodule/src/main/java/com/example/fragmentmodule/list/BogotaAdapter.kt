@@ -26,8 +26,12 @@ class BogotaAdapter(
         holder.bind(bogota)
     }
 
-    override fun getItemCount(): Int {
-        return bogotaList.size
+    override fun getItemCount(): Int = bogotaList.size
+
+    fun appendItems(newItems: ArrayList<BogotaItem>) {
+        bogotaList.clear()
+        bogotaList.addAll(newItems)
+        notifyDataSetChanged()
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
