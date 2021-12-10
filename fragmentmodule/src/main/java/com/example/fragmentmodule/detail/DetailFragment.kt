@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.fragmentmodule.R
 import com.example.fragmentmodule.databinding.FragmentDetailBinding
@@ -34,6 +35,9 @@ class DetailFragment : Fragment() {
             Picasso.get().load(bogota.urlpic).into(imagenImageView)
             contenidoTextView.text = bogota.contenido
             tempTextView.text = bogota.temperatura
+            mapButton.setOnClickListener{
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(posicionPunto = bogota))
+            }
         }
     }
 
