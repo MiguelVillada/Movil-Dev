@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.detail
+package com.example.fragmentmodule.ui.detail
 
 import androidx.lifecycle.ViewModel
 
