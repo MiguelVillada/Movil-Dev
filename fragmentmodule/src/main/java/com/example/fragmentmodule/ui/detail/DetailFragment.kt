@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.detail
+package com.example.fragmentmodule.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.fragmentmodule.databinding.FragmentDetailBinding
-import com.example.fragmentmodule.list.ListViewModel
 import com.squareup.picasso.Picasso
 
 

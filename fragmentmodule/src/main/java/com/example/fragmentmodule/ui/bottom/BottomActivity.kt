@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.bottom
+package com.example.fragmentmodule.ui.bottom
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

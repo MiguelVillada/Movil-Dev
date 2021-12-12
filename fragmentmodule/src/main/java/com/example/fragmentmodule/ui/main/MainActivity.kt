@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.main
+package com.example.fragmentmodule.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
