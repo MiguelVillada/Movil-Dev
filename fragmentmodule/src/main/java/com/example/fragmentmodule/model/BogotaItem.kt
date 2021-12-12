@@ -16,5 +16,9 @@ data class BogotaItem(
     @SerializedName("contenido")
     val contenido: String,
     @SerializedName("temperatura")
-    val temperatura: String
+    val temperatura: String,
+    @SerializedName("latitud")
+    val latitud: Double,
+    @SerializedName("longitud")
+    val longitud: Double
 ) : Serializable
