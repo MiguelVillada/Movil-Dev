@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MovilDevAppTurismo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="monserrate" />
     <string name="monserrate1">MONSERRATE</string>
     <string name="descripcion">Descripción:</string>
@@ -8,4 +10,14 @@
     <string name="descripcion_corta_monse">El cerro de Monserrate es el más conocido de los cerros Orientales de Bogotá. Junto a Guadalupe es uno de los cerros tutelares de la ciudad.</string>
     <string name="puntu_monse">Puntuación: 4.5</string>
     <string name="temperatura">10°C</string>
+
+    <!-- Sync Preferences -->
+    <string name="notifications">Notificaciones</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_list">Lista</string>
+    <string name="title_detail">Detalle</string>
+    <string name="title_preference">Preferencias</string>
 </resources>

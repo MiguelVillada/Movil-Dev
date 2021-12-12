@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MovilDevAppTurismo"
 include ':app'
+include ':fragmentmodule'
