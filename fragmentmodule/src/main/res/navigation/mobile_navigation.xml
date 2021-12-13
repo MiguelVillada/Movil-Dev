@@ -36,6 +36,12 @@
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.fragmentmodule.maps.MapsFragment"
-        android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        android:label="Ubicación"
+        tools:layout="@layout/fragment_maps" >
+        <argument android:name="posicionPunto"
+            app:argType="com.example.fragmentmodule.model.BogotaItem" />
+    </fragment>
+        <argument
+            android:name="posicionPunto"
+            app:argType="com.example.fragmentmodule.model.BogotaItem" />
 </navigation>

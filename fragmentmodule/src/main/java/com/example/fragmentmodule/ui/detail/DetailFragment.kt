@@ -1,6 +1,7 @@
 package com.example.fragmentmodule.ui.detail
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.fragmentmodule.databinding.FragmentDetailBinding
 import com.squareup.picasso.Picasso
+import android.util.Log.d as d1
 
 
 class DetailFragment : Fragment() {
@@ -38,7 +40,7 @@ class DetailFragment : Fragment() {
             tempTextView.text = bogota.temperatura
 
             mapButton.setOnClickListener {
-                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment())
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(posicionPunto = bogota))
             }
         }
     }
