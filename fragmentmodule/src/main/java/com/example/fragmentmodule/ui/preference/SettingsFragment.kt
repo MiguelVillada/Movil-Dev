@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.preference
+package com.example.fragmentmodule.ui.preference
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat

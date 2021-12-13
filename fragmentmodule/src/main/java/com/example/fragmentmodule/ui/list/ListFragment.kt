@@ -1,4 +1,4 @@
-package com.example.fragmentmodule.list
+package com.example.fragmentmodule.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fragmentmodule.databinding.FragmentListBinding
-import com.example.fragmentmodule.main.MainActivity
 import com.example.fragmentmodule.model.BogotaItem
 
 
@@ -32,7 +31,10 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        listViewModel.loadMockBogotaFromJson(context?.assets?.open("poibogota.json"))
+
+        //listViewModel.loadMockBogotaFromJson(context?.assets?.open("poibogota.json"))
+
+        listViewModel.getBogotaFromServer()
 
         listViewModel.onBogotaLoaded.observe(viewLifecycleOwner, { result ->
             onBogotaLoadedSubscribe(result)
