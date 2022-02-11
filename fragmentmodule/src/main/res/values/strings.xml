@@ -20,4 +20,7 @@
     <string name="title_list">Lista</string>
     <string name="title_detail">Detalle</string>
     <string name="title_preference">Preferencias</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
 </resources>

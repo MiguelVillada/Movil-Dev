@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "66587728263",
+    "project_id": "movildevappturismo",
+    "storage_bucket": "movildevappturismo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66587728263:android:3aa9469dc22733c2a11b22",
+        "android_client_info": {
+          "package_name": "com.example.fragmentmodule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66587728263-9iks8vm7mlfs9o9bc9eh82gog7q42drk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fragmentmodule",
+            "certificate_hash": "15a7709edf62e801604fbcc9eab54474da68f445"
+          }
+        },
+        {
+          "client_id": "66587728263-356o42qkr9qpmvls5g5j567lh8vvbrju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7nsCZHEWCenF9veHq2Xd-y51myiFD0Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66587728263-356o42qkr9qpmvls5g5j567lh8vvbrju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
